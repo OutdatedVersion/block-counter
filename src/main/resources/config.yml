@@ -1,0 +1,47 @@
+messages:
+   # If a player runs the command, but doesn't have
+   # any WorldEdit selection for us to use we'll send em' this.
+   no-selection: "&c&lYou have no active WorldEdit selection!"
+
+   # Well. In theory this shouldn't ever happen, but in case the
+   # selection you have doesn't have the world set they'll get this message.
+   no-world: "&c&lErm... WorldEdit seems to be having an issue. Try redoing your selection?"
+
+   # In the event that executing the command magically fails we
+   # send the player this message & print some info to your console.
+   # Hopefully this never happens to you.
+   #
+   # Valid variables:
+   # player: The name of player who ran the command
+   um-rip: "&c&lUh oh. We had an issue analyzing that selection. Reselect & try again?"
+
+   # After counting the types of blocks in your selection we send you
+   # just this message.
+   #
+   # Valid variables:
+   # player: The name of the player who ran the command
+   # total: The amount of blocks we counted
+   start: "&a&lCounted a total of %count% blocks. Type/Count:\n\n"
+
+   # For every type of block we detect the player is sent this message
+   #
+   # Valid variables:
+   # type: The material of the block
+   # count: The amount of this block we found
+   line: "&7%type%: &e%count%"
+
+   # After we list out the types of blocks a player
+   # will get this message.
+   #
+   # Valid variables:
+   # count: The total amount of blocks we found
+   #        in your selection
+   end: ""
+
+results:
+   # While listing out types you
+   # may not want some materials
+   # to display. Such as air.. add
+   # those here, and we won't send those.
+   exclude-of-type:
+      - 'AIR'

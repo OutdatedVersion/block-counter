@@ -1,0 +1,5 @@
+name: Block-Counter
+main: com.outdatedversion.BlockCounter
+version: ${project.version}
+depend: [WorldEdit]
+author: OutdatedVersion
