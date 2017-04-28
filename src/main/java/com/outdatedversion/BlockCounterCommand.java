@@ -15,19 +15,30 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * OutdatedVersion
- * Sep/19/2016 (6:11 PM)
+ * In charge of taking in user input
+ * then spitting back results
+ *
+ * @author Ben (OutdatedVersion)
+ * @since Sep/19/2016 (6:11 PM)
  */
-
-public class BlockCounterCmd extends Command
+public class BlockCounterCommand extends Command
 {
 
+    /** WorldEdit plugin instance */
     private final WorldEditPlugin worldEdit;
+
+    /** configuration details */
     private final FileConfiguration config;
 
+    /** materials that we don't count whilst summing a chunk */
     private final List<Material> excludedTypes;
 
-    public BlockCounterCmd(CommandHandler handler, WorldEditPlugin worldEdit, FileConfiguration config)
+    /**
+     * @param handler our command center instance
+     * @param worldEdit WorldEdit
+     * @param config our configuration file
+     */
+    public BlockCounterCommand(CommandHandler handler, WorldEditPlugin worldEdit, FileConfiguration config)
     {
         super(handler, "blockcounter.command", "blockcount", "countblocks");
 
@@ -91,6 +102,15 @@ public class BlockCounterCmd extends Command
         }
     }
 
+    /**
+     * Sends the provided {@link Player} a message
+     * taking in data from the local {@link #config}
+     * file
+     *
+     * @param player our player
+     * @param configLocation path to the configuration data
+     * @param args the data requested from the file
+     */
     private void message(Player player, String configLocation, String... args)
     {
         player.sendMessage(Util.formatMessage(config.getString(configLocation), args));

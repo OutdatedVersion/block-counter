@@ -8,6 +8,11 @@
     <artifactId>block-counter</artifactId>
     <version>1.0</version>
 
+    <properties>
+        <plugin.name>Block-Counter</plugin.name>
+        <plugin.main>com.outdatedversion.BlockCounter</plugin.main>
+    </properties>
+
     <repositories>
         <repository>
             <id>spigot-repo</id>

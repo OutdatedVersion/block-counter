@@ -6,12 +6,16 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 
 /**
- * OutdatedVersion
- * Sep/19/2016 (6:14 PM)
+ * Local utilities to (kind of?)
+ * clean code up a tad
+ *
+ * @author Ben (OutdatedVersion)
+ * @since Sep/19/2016 (6:14 PM)
  */
-
-public class Util
+class Util
 {
+
+    private Util() { }
 
     /**
      * The paragraph character is effort
